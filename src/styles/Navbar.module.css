@@ -1,5 +1,5 @@
 .navbar {
-    z-index: 10000;
+    z-index: 1000;
     position: fixed;
     bottom: -1px;
     left: 0;
@@ -33,6 +33,67 @@
     height: 35px !important
 }
 
+.largeLogo {
+    width: 60px !important
+}
+
 .banner {
     background: #1A75E8
+}
+
+.noOfMsgs {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid #1A75E8;
+    background: #1A75E8;
+    color: #fff
+}
+
+.noOfMessages {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid #1A75E8;
+    background: #1A75E8;
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+
+.typeText {
+    top: 5px;
+    left: 10px;
+    letter-spacing: 0.1em;
+}
+
+.typingAnim_1 {
+    top: 5px;
+    left: 96px;
+    letter-spacing: 0.1em;
+    animation: bounce 1s forwards infinite;
+}
+
+.typingAnim_2 {
+    top: 5px;
+    left: 96px;
+    letter-spacing: 0.1em;
+    animation: bounce 1.2s forwards infinite;
+}
+
+.typingAnim_3 {
+    top: 5px;
+    left: 96px;
+    letter-spacing: 0.1em;
+    animation: bounce 1.4s forwards infinite;
+}
+
+@keyframes bounce {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

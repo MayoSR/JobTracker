@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IconButton, Box, Center, Flex, Heading, Text, Icon, Input, InputGroup, InputRightElement, InputLeftElement, Button, Avatar } from "@chakra-ui/react"
 import { GiLaptop, GiElectric, GiEasel, GiMechanicGarage, GiAtom, GiAnatomy, GiChart, GiConsoleController } from "react-icons/gi";
 import { BiCheckCircle, BiSearchAlt, BiChevronRight } from "react-icons/bi";
@@ -17,8 +17,12 @@ export default function Home() {
 
     let history = useHistory()
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
-        <div>
+        <Box p={4}>
             <Flex flexDir="column" className={classes.banner} w="100vw" color="white" m={"-16px"} p={4} py={6}>
                 <Flex justifyContent="space-between" w={"100%"} alignItems="center">
                     <Flex alignItems="center">
@@ -41,7 +45,7 @@ export default function Home() {
                 <Flex flexWrap="nowrap" overflowX="scroll" overflowY="hidden" pb={5}>
                     {
                         [{ icon: GiLaptop, job: "Computer" }, { icon: GiConsoleController, job: "Games" }, { icon: GiEasel, job: "Artist" }, { icon: GiMechanicGarage, job: "Mechanical" }, { icon: GiAtom, job: "Chemistry" }, { icon: GiAnatomy, job: "Doctor" }, { icon: GiChart, job: "Economist" },].map(icon => {
-                            return <Box width={"80px"} mr={2} bg="white" borderRadius="10px" boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);">
+                            return <Box width={"80px"} mr={2} bg="white" borderRadius="10px" boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);" onClick={() => history.push("/category")}>
                                 <Center flexDir="column" p={2} mr={4} width={"80px"}>
                                     <Icon
                                         w={8}
@@ -65,7 +69,7 @@ export default function Home() {
                 <Flex flexWrap="nowrap" overflowX="scroll" overflowY="hidden" pb={5}>
                     {
                         ["google", "microsoft", "apple", "netflix", "spotify", "facebook", "amazon", "spotify", "ferrari"].map(icon => {
-                            return <Box width={"60px"} mr={2} py={4} bg="white" borderRadius="10px" boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);">
+                            return <Box width={"60px"} mr={2} py={4} bg="white" borderRadius="10px" onClick={() => history.push("/company")} boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);">
                                 <Center flexDir="column" width={"60px"}>
                                     <img src={"/companies/" + icon + ".png"} alt={icon} className={classes.imgStyles} />
                                 </Center>
@@ -109,6 +113,6 @@ export default function Home() {
             </Box>
             <br></br>
             <br></br>
-        </div >
+        </Box >
     )
 }

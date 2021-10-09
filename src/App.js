@@ -11,10 +11,14 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import { Box, Center } from "@chakra-ui/react"
 import JobDesc from './components/JobDesc';
+import Messages from './components/Messages';
+import ChatScreen from './components/ChatScreen';
+import CategoryJobs from './components/CategoryJobs';
+import CompanyDetails from './components/CompanyDetails';
 
 function App() {
   return (
-    <Box className="App" p={4} bg="#f5f5f5">
+    <div className="App">
       <Router>
         <Switch>
           <Route exact path="/">
@@ -25,13 +29,22 @@ function App() {
           <Route exact path="/job">
             <JobDesc />
           </Route>
-          <Route exact path="/profile">
+          <Route exact path="/messages">
+            <Messages />
           </Route>
-
+          <Route exact path="/chat">
+            <ChatScreen />
+          </Route>
+          <Route exact path="/category">
+            <CategoryJobs />
+          </Route>
+          <Route exact path="/company">
+            <CompanyDetails />
+          </Route>
         </Switch>
         <Navbar />
       </Router>
-    </Box>
+    </div>
   );
 }
 
