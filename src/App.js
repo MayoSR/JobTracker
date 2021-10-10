@@ -15,6 +15,7 @@ import Messages from './components/Messages';
 import ChatScreen from './components/ChatScreen';
 import CategoryJobs from './components/CategoryJobs';
 import CompanyDetails from './components/CompanyDetails';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route exact path="/company">
             <CompanyDetails />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
           </Route>
         </Switch>
         <Navbar />

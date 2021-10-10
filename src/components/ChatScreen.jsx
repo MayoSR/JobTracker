@@ -27,9 +27,13 @@ export default function ChatScreen() {
                     <Center>
                         <Avatar size="sm" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mr={3} ><AvatarBadge boxSize="0.95em" bg="green.500" /> </Avatar>
                         <Flex flexDir="column">
-                            <Heading fontSize="lg">Reed Richards</Heading>
+                            <Flex alignItems="center">
+                                <Heading fontSize="lg" mr={2}>Reed Richards</Heading>
+                                <Icon w={'0.7em'} h={'0.7em'} mt={1} color="green" as={BsFillCheckCircleFill} />
+                            </Flex>
                             <Text color="grey" fontSize="xs">Sr. UX Developer at Google</Text>
                         </Flex>
+
                     </Center>
 
                 </Flex>

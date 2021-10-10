@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import classes from "../styles/Navbar.module.css"
 import { Box, InputGroup, InputLeftElement, Input, InputRightElement, Icon, Flex, Text, IconButton, Heading, Avatar, Center } from "@chakra-ui/react"
 import { BiHomeAlt, BiFoodMenu, BiTimeFive, BiBookHeart, } from "react-icons/bi";
-import { BsFillEnvelopeOpenFill } from "react-icons/bs";
+import { BsFillEnvelopeOpenFill, BsFillPersonFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 
 export default function Navbar() {
@@ -45,6 +45,20 @@ export default function Navbar() {
                         </Center>
                     </Box>
                     <Text className={classes.buttonText} fontSize="xs">Messages</Text>
+                </Flex>
+            </Box>
+            <Box mt={1}>
+                <Flex alignItems="center" flexDirection="column" className={currentTab === "profile" ? classes.activeButton : classes.inactive}>
+                    <Box position="relative">
+                        <IconButton
+                            variant="link"
+                            aria-label="Call Sage"
+                            icon={<Icon w={6} h={6} as={BsFillPersonFill} />}
+                            onClick={() => changeRoute("profile")}
+                            className={currentTab === "profile" ? classes.activeButton : classes.inactive}
+                        />
+                    </Box>
+                    <Text className={classes.buttonText} fontSize="xs">Profile</Text>
                 </Flex>
             </Box>
 
