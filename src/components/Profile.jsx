@@ -65,9 +65,9 @@ export default function Profile() {
             <Heading fontSize="3xl" >Your Jobs</Heading>
             <Grid templateColumns="repeat(2, 1fr)" rowGap={2} mt={3}>
                 {[{ type: "Saved", count: 10, icon: AiOutlineFolderOpen },
-                { type: "Applied", count: 10, icon: GiSuitcase },
-                { type: "For You", count: 10, icon: FiThumbsUp },
-                { type: "Accepted", count: 10, icon: BsFillPenFill }
+                { type: "Applied", count: 22, icon: GiSuitcase },
+                { type: "For You", count: 8, icon: FiThumbsUp },
+                { type: "Accepted", count: 5, icon: BsFillPenFill }
                 ].map(topic => {
                     return <Flex flexDir="column" justifyContent="space-between" mr={2} p={2} bg="#1A75E8" color="#fff" height="140px" borderRadius="10px" boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.4);" >
                         <Flex justifyContent="space-between" alignItems="center">

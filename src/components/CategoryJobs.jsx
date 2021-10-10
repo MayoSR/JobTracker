@@ -45,7 +45,7 @@ export default function CategoryJobs() {
                             <Heading fontSize="md" pl={2}>Sr. UX Developer</Heading>
                         </Flex>
                         <Grid templateColumns="repeat(2, 1fr)" mt={3} width="100%" gap={1}>
-                            {["California", "$110k-$120k", "1 hour ago", "87 applied"].map(data => {
+                            {["California", "$90k-$110k", "1 hour ago", "87 applied"].map(data => {
                                 return <Tag size="sm" variant="solid" background="rgba(26, 117, 232,0.2)" color="#1a75e8" fontSize="10px" mr={1}>
                                     {data}
                                 </Tag>

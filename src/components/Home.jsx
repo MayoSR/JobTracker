@@ -34,7 +34,7 @@ export default function Home() {
                 <Flex mt={3}>
                     <InputGroup mr={2}>
                         <InputLeftElement children={<Icon as={BiSearchAlt} />} color="#1A75E8" />
-                        <Input placeholder="Search for jobs" isFullWidth variant="outlined" />
+                        <Input placeholder="Search for jobs" color="#000" isFullWidth variant="outlined" />
                     </InputGroup>
                     <IconButton icon={<Icon as={BsFilter} />} variant="outline" />
                 </Flex>

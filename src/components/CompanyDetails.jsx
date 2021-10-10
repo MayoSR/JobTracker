@@ -81,7 +81,7 @@ export default function CompanyDetails() {
                                         <Text fontSize="sm"  >Mountain View, CA, United States </Text>
                                     </Flex>
                                 </Box>
-                                <BarChart label={"# of Applicants"} />
+                                <BarChart label={"# of Applications"} colorR={26} colorG={117} colorB={232} />
                                 <Box mt={3}>
 
                                     <img src="/googlemap.png" alt="google_map" width="100%" />
