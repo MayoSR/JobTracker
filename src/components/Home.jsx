@@ -22,7 +22,7 @@ export default function Home() {
     }, [])
 
     return (
-        <Box p={4}>
+        <Box p={4} overflowX="hidden">
             <Flex flexDir="column" className={classes.banner} color="white" m={"-16px"} p={4} py={6}>
                 <Flex justifyContent="space-between" w={"100%"} alignItems="center">
                     <Flex alignItems="center">
@@ -42,7 +42,7 @@ export default function Home() {
             </Flex>
             <Box mt={8}>
                 <Heading my={4} size="md">Top Categories</Heading>
-                <Flex flexWrap="nowrap" className="scrollbar-wrapper" overflowX="scroll" overflowY="hidden" pb={5}>
+                <Flex flexWrap="nowrap" className="scrollbar-wrapper" overflowX="scroll" overflowY="hidden" pb={5} minW="100vw" pr={"40px"}>
                     {
                         [{ icon: GiLaptop, job: "Computer" }, { icon: GiConsoleController, job: "Games" }, { icon: GiEasel, job: "Artist" }, { icon: GiMechanicGarage, job: "Mechanical" }, { icon: GiAtom, job: "Chemistry" }, { icon: GiAnatomy, job: "Doctor" }, { icon: GiChart, job: "Economist" },].map(icon => {
                             return <Box width={"80px"} mr={2} bg="white" borderRadius="10px" boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);" onClick={() => history.push("/category")}>
@@ -66,7 +66,7 @@ export default function Home() {
             </Box>
             <Box>
                 <Heading my={4} size="md">Top Companies</Heading>
-                <Flex flexWrap="nowrap" className="scrollbar-wrapper" overflowX="scroll" overflowY="hidden" pb={5}>
+                <Flex flexWrap="nowrap" className="scrollbar-wrapper" overflowX="scroll" overflowY="hidden" pb={5} minW="100vw" pr={"40px"}>
                     {
                         ["google", "microsoft", "apple", "netflix", "spotify", "facebook", "amazon", "spotify", "ferrari"].map(icon => {
                             return <Box width={"60px"} mr={2} py={4} bg="white" borderRadius="10px" onClick={() => history.push("/company")} boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);">
@@ -90,9 +90,14 @@ export default function Home() {
                                 <Flex flexDir="column">
                                     <Heading fontSize="md">Senior UX developer</Heading>
                                     <Flex flexDir="column" >
-                                        <Text fontSize="xs" height="40px" overflow="hidden" textOverflow="ellipsis">
-                                            As a UX Engineer, you'll work on the front end of our products in a challenging, fast-paced environment, helping to bridge UX best practices and production execution
-                                        </Text>
+                                        <Flex alignItems="center">
+                                            <Text fontSize="xs" height="40px" overflow="hidden" textOverflow="ellipsis">
+                                                As a UX Engineer, you'll work on the front end of our products in a challenging, fast-paced environment, helping to bridge UX best practices and production execution
+                                            </Text>
+                                            <Flex>
+                                                <Icon w={7} h={7} as={BiChevronRight} />
+                                            </Flex>
+                                        </Flex>
                                         <Flex mt={3} width="100%">
                                             {["California", "$110k - $120k", "1 hour ago"].map(data => {
                                                 return <Tag size="sm" variant="solid" background="rgba(26, 117, 232,0.2)" color="#1a75e8" fontSize="10px" mr={1}>
@@ -102,9 +107,7 @@ export default function Home() {
                                         </Flex>
                                     </Flex>
                                 </Flex>
-                                <Flex>
-                                    <Icon w={7} h={7} as={BiChevronRight} />
-                                </Flex>
+
                             </Flex>
 
                         })
