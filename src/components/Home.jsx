@@ -23,7 +23,7 @@ export default function Home() {
 
     return (
         <Box p={4}>
-            <Flex flexDir="column" className={classes.banner} w="100vw" color="white" m={"-16px"} p={4} py={6}>
+            <Flex flexDir="column" className={classes.banner} color="white" m={"-16px"} p={4} py={6}>
                 <Flex justifyContent="space-between" w={"100%"} alignItems="center">
                     <Flex alignItems="center">
                         <Avatar size="sm" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mr={3} />
@@ -42,7 +42,7 @@ export default function Home() {
             </Flex>
             <Box mt={8}>
                 <Heading my={4} size="md">Top Categories</Heading>
-                <Flex flexWrap="nowrap" overflowX="scroll" overflowY="hidden" pb={5}>
+                <Flex flexWrap="nowrap" className="scrollbar-wrapper" overflowX="scroll" overflowY="hidden" pb={5}>
                     {
                         [{ icon: GiLaptop, job: "Computer" }, { icon: GiConsoleController, job: "Games" }, { icon: GiEasel, job: "Artist" }, { icon: GiMechanicGarage, job: "Mechanical" }, { icon: GiAtom, job: "Chemistry" }, { icon: GiAnatomy, job: "Doctor" }, { icon: GiChart, job: "Economist" },].map(icon => {
                             return <Box width={"80px"} mr={2} bg="white" borderRadius="10px" boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);" onClick={() => history.push("/category")}>
@@ -66,7 +66,7 @@ export default function Home() {
             </Box>
             <Box>
                 <Heading my={4} size="md">Top Companies</Heading>
-                <Flex flexWrap="nowrap" overflowX="scroll" overflowY="hidden" pb={5}>
+                <Flex flexWrap="nowrap" className="scrollbar-wrapper" overflowX="scroll" overflowY="hidden" pb={5}>
                     {
                         ["google", "microsoft", "apple", "netflix", "spotify", "facebook", "amazon", "spotify", "ferrari"].map(icon => {
                             return <Box width={"60px"} mr={2} py={4} bg="white" borderRadius="10px" onClick={() => history.push("/company")} boxShadow="-1px 3px 17px -4px rgba(0,0,0,0.17);">
